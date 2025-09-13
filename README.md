@@ -4,7 +4,7 @@ Task >> Replicate a simple version of [Popules.com](https://popules.com) landing
 
 Requirements:
 
-* Scrape Reddit posts from a chosen subreddit (used in this assessment - /confession`)
+* Scrape Reddit posts from a chosen subreddit (used in this assessment - /bigbangtheory`)
 * Collect \~10 “pages” of posts (≈ 250 posts)
 * Keep only posts that contain either **images** or **text**
 * Save results into a JSON file (`output.json`) with fields:
