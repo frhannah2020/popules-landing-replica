@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Reddit Posts</title>
+</head>
+<body>
+  <h1>Reddit Posts with Images/Text</h1>
+  <div id="posts"></div>
+
+  <script>
+    fetch("output.json")
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById("posts");
+        data.forEach(post => {
+          const div = document.createElement("div");
+          div.innerHTML = `
+            <h3><a href="${post.post_url}" target="_blank">${post.post_title}</a></h3>
+            ${post.image_url ? `<img src="${post.image_url}" width="400">` : ""}
+            ${post.text ? `<p>${post.text}</p>` : ""}
+            <hr>
+          `;
+          container.appendChild(div);
+        });
+      });
+  </script>
+</body>
+</html>
