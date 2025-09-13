@@ -1,14 +1,13 @@
 import praw
 import json
 
-# Authenticate (replace with your credentials)
 reddit = praw.Reddit(
     client_id="rgSi9cXYcSHJ53iFyoHwqw",
     client_secret="ilEwpDBYxEmFuivKWa6RjGq_e8UG-A",
     user_agent="popules_scraper by u/Calm_Painting_8017"
 )
 
-subreddit = reddit.subreddit("confession")  # or any subreddit you like
+subreddit = reddit.subreddit("confession")  
 
 results = []
 
@@ -36,3 +35,4 @@ with open("output.json", "w", encoding="utf-8") as f:
     json.dump(results, f, indent=2, ensure_ascii=False)
 
 print(f"Saved {len(results)} posts with images or text.")
+
